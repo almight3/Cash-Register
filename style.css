@@ -37,8 +37,9 @@ table{
     border: 2px solid;
     padding: 2rem;
     margin: 0.5rem;
+    border-collapse: collapse;
 }
-table tr{
+table tr td{
     border: 1px solid;
     padding: 1rem;
 }

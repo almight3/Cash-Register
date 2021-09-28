@@ -7,18 +7,26 @@ const availableNotes = [2000, 500, 200, 100, 50, 20, 10, 5, 1];
 
 checkButton.addEventListener("click", function validateAmount() {
     message.style.display = "none";
+    clearTables();
     if (billAmount.value > 0) {
+          console.log("start")
+          console.log(cashGiven.value)
+          console.log(billAmount.value)
+
         if (cashGiven.value > billAmount.value) {
+            console.log("end")
+
             const amountToReturn = cashGiven.value - billAmount.value;
             calculateAmountToReturn(amountToReturn);
         } else if (cashGiven.value === billAmount.value) {
-            showMessage("NO Amount to be Return")
+            showMessage("No Amount to be Return")
 
         }
         else {
-            showMessage("amount should be equal or greater than Bill amount");
-            console.log(cashGiven.value)
+            showMessage("Amount should be equal or greater than Bill amount");
+           
             console.log(billAmount.value)
+            console.log(cashGiven.value)
         }
     } else {
         showMessage("Enter Valid Amount");
@@ -40,4 +48,11 @@ function calculateAmountToReturn(amountToReturn) {
 function showMessage(msg) {
     message.style.display = "block";
     message.innerText = msg;
+}
+
+function clearTables(){
+    for(let i = 0; i<availableNotes.length; i++){
+        numberOfNotes[i].innerText = 0; 
+    }
+
 }

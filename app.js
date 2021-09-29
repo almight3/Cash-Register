@@ -9,11 +9,9 @@ checkButton.addEventListener("click", function validateAmount() {
     message.style.display = "none";
     clearTables();
     if (billAmount.value > 0) {
-          console.log("start")
-          console.log(cashGiven.value)
-          console.log(billAmount.value)
+          
 
-            if (cashGiven.value > billAmount.value) {
+            if(parseInt(cashGiven.value) > billAmount.value) {
             console.log("end")
 
             const amountToReturn = cashGiven.value - billAmount.value;
@@ -26,8 +24,7 @@ checkButton.addEventListener("click", function validateAmount() {
             else {
             showMessage("Amount should be equal or greater than Bill amount");
            
-            console.log(billAmount.value)
-            console.log(cashGiven.value)
+            
         }
     } else {
         showMessage("Enter Valid Amount");

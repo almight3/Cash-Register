@@ -13,16 +13,17 @@ checkButton.addEventListener("click", function validateAmount() {
           console.log(cashGiven.value)
           console.log(billAmount.value)
 
-        if (cashGiven.value > billAmount.value) {
+            if (cashGiven.value > billAmount.value) {
             console.log("end")
 
             const amountToReturn = cashGiven.value - billAmount.value;
             calculateAmountToReturn(amountToReturn);
-        } else if (cashGiven.value === billAmount.value) {
+            }
+            else if (cashGiven.value === billAmount.value) {
             showMessage("No Amount to be Return")
 
-        }
-        else {
+              }
+            else {
             showMessage("Amount should be equal or greater than Bill amount");
            
             console.log(billAmount.value)
